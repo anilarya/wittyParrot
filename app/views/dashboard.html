@@ -1,0 +1,26 @@
+<br>
+  
+<div class="container">
+	<div class="panel panel-primary">
+		  <!-- Default panel contents -->
+		 <div class="panel-heading"><font size="5" color="white"> <b>OUTPUT</b></font> </div>
+		 	<div class="panel-body">
+	    		<div style="min-height: 5px; max-height: 520px;  overflow-y:scroll"> 
+	    			<b>ChannelTitle : </b>{{model.channelTitle}} <br>
+	    			Click!! on thumbnail to see videos
+		       		<div ng-repeat="items  in model.response">
+		       				
+						<div class="row"> 	
+					        <div class="col-md-5">
+       							 <a ng-href="https://www.youtube.com/watch?v={{items.id.videoId}}" target="_blank"><img ng-src="{{items.snippet.thumbnails.medium.url}}" alt="Description" /> </a>
+       			 			</div>  
+       			 			<div class="col-md-5">
+       			 				{{items.snippet.description}}
+       			 			</div> 
+		       			 </div><br>
+		       		</div>
+	       		</div> 
+		  </div> 
+	</div>
+</div>
+
